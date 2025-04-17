@@ -34,3 +34,5 @@ COPY --from=dev /openmrs/distribution/openmrs-distro.properties /openmrs/distrib
 COPY --from=dev /openmrs/distribution/openmrs_modules /openmrs/distribution/openmrs_modules
 COPY --from=dev /openmrs/distribution/openmrs_owas /openmrs/distribution/openmrs_owas
 COPY --from=dev /openmrs_distro/distro/configuration /openmrs/distribution/openmrs_config
+
+COPY distro/modules/commonreports-1.5.0-SNAPSHOT.omod /openmrs/distribution/openmrs_modules
