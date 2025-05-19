@@ -37,6 +37,7 @@
     "@openmrs/esm-primary-navigation-app": "next",
     "@openmrs/esm-service-queues-app": "next",
     "@openmrs/esm-system-admin-app": "next",
+    "@openmrs/esm-reports-app": "next",
     "@openmrs/esm-user-onboarding-app": "next",
     "@openmrs/esm-ward-app": "next",
     "@openmrs/esm-stock-management-app": "next",
