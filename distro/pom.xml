@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -24,7 +26,8 @@
     <!-- track module versions
          we do so here so that we can utilise Maven to track updates, etc. -->
     <fhir2.version>2.3.0-SNAPSHOT</fhir2.version>
-    <authentication.version>1.0.0</authentication.version>
+    <authentication.version>1.1.0</authentication.version>
+    <authenticationui.version>1.1.0</authenticationui.version>
     <openmrs.version>2.6.7</openmrs.version>
     <initializer.version>2.7.0</initializer.version>
     <webservices.rest.version>2.46.0</webservices.rest.version>
@@ -57,6 +60,11 @@
     <!-- Stock Management and Billing -->
     <stockmanagement.version>2.0.2-SNAPSHOT</stockmanagement.version>
     <billing.version>1.2.0-SNAPSHOT</billing.version>
+    <uicommonsVersion>2.26.0</uicommonsVersion>
+    <uiframeworkVersion>3.25.0</uiframeworkVersion>
+    <uilibraryVersion>2.0.7</uilibraryVersion>
+    <appframeworkVersion>2.18.0</appframeworkVersion>
+    <appuiVersion>1.18.0</appuiVersion>
   </properties>
 
   <dependencies>
@@ -79,6 +87,12 @@
       <groupId>org.openmrs.module</groupId>
       <artifactId>authentication-omod</artifactId>
       <version>${authentication.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>authenticationui-omod</artifactId>
+      <version>${authenticationui.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -247,6 +261,36 @@
       <version>${billing.version}</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>uicommons-omod</artifactId>
+      <version>${uicommonsVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>uiframework-omod</artifactId>
+      <version>${uiframeworkVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>uilibrary-omod</artifactId>
+      <version>${uilibraryVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>appframework-omod</artifactId>
+      <version>${appframeworkVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>appui-omod</artifactId>
+      <version>${appuiVersion}</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -305,7 +349,7 @@
             <configuration>
               <target>
                 <copy todir="${project.build.directory}/openmrs_config">
-                  <fileset dir="${project.basedir}/configuration"/>
+                  <fileset dir="${project.basedir}/configuration" />
                 </copy>
               </target>
             </configuration>
