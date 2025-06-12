@@ -58,7 +58,7 @@
   },
   "@ohri/openmrs-esm-ohri-hiv-care-treatment-app": {
     "formNames": {
-      "ServiceEnrolmentFormName": "DRC HIV Enrolment Form v1.2",
+      "ServiceEnrolmentFormName": "GOO1 DRC HIV Enrolment Form v1.3.1",
       "ClinicalVisitFormName": "DRC Clinical Visit Form v2.2",
       "HIVTestingFormName": "HIV Testing",
       "HTSPreTestFormName": "HTS Pre-Test Counselling",
